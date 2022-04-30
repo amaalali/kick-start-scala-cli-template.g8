@@ -9,8 +9,11 @@ import java.util._
 import java.io.StringReader
 import java.io.ByteArrayOutputStream
 
-// Solution for challenge at $challengeurl$
-class CodeSpec extends AnyFreeSpec {
+/*
+ * Acceptance tests for challenge url
+ * $challengeurl$
+ */
+class SolutionSpec extends AnyFreeSpec {
 
   "test runs and passes" in {
     val testInput = os.read(os.resource(getClass.getClassLoader) / "sample_input")
@@ -21,7 +24,7 @@ class CodeSpec extends AnyFreeSpec {
 
     Console.withIn(mockIn) {
       Console.withOut(outputStream) {
-        Code.main(Array.empty)
+        Solution.main(Array.empty)
       }
     }
 
@@ -29,4 +32,5 @@ class CodeSpec extends AnyFreeSpec {
 
     result mustEqual expectedResult
   }
+
 }

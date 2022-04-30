@@ -3,10 +3,11 @@ import java.io.InputStreamReader
 import java.io.BufferedReader
 import java.util.Scanner
 
-// Solution for challenge at $challengeurl$
-object Code {
-
-  type Return = String
+/*
+ * Solution for challenge url
+ * $challengeurl$
+ */
+object Solution {
 
   def main(args: Array[String]): Unit = {
     val reader: BufferedReader = Console.in
@@ -26,7 +27,7 @@ object Code {
     in.close()
   }
 
-  private def logic(caseInput1: Int, caseInput2: Int, data: String): Return = {
+  def logic(caseInput1: Int, caseInput2: Int, data: String): String = {
     "" + (caseInput1 + caseInput2) + " " + (caseInput1 * caseInput2)
   }
 
