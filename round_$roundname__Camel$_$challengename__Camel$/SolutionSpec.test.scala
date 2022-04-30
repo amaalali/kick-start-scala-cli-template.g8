@@ -29,8 +29,10 @@ class SolutionSpec extends AnyFreeSpec {
     }
 
     val result = outputStream.toString()
+    
+    val result_norm = scala.io.Source.fromString(result).getLines().filter(_.nonEmpty).mkString("\n")
 
-    result mustEqual expectedResult
+    result_norm mustEqual expectedResult
   }
 
 }
